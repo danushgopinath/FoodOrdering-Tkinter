@@ -1,0 +1,90 @@
+create database food_ordering_management_system;
+use food_ordering_management_system;
+
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+create table customer_details(
+cust_id varchar(10) not null, 
+first_name varchar(30) not null, 
+last_name varchar(30), 
+mobile_no integer not null, 
+c_password varchar(30) not null);
+
+create table restaurants(
+rest_id varchar(10) not null , 
+rest_name varchar(30) not null, 
+rest_address varchar(30) not null, 
+contact integer);
+
+create table food_items(
+rest_id varchar(10) not null , 
+food_id varchar(10) not null, 
+f_name varchar(20) not null, 
+price integer not null);
+
+create table order_details(
+bill_id varchar(10) not null , 
+cust_id varchar(10) not null , 
+rest_id varchar(10) not null , 
+food_id varchar(10) not null,
+quantity integer not null, 
+price integer not null);
+
+create table total(
+bill_id varchar(10) not null ,
+cust_id varchar(10) not null,
+total_price integer not null);
+
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+
+insert into food_items values('R01', 'F01', 'Chicken Burger', 200);
+insert into food_items values('R02', 'F01', 'Chicken Burger', 250);
+insert into food_items values('R03', 'F01', 'Chicken Burger', 180);
+insert into food_items values('R01', 'F02', 'Chicken Wings', 150);
+insert into food_items values('R02', 'F02', 'Chicken Wings', 180);
+insert into food_items values('R03', 'F03', 'Cold Coffee', 120);
+insert into food_items values('R05', 'F03', 'Cold Coffee', 150);
+insert into food_items values('R03', 'F04', 'Cappuccino', 100);
+insert into food_items values('R04', 'F04', 'Cappuccino', 120);
+insert into food_items values('R05', 'F04', 'Cappuccino', 120);
+insert into food_items values('R01', 'F05', 'Coca-Cola', 80);
+insert into food_items values('R02', 'F05', 'Coca-Cola', 80);
+insert into food_items values('R04', 'F05', 'Coca-Cola', 60);
+insert into food_items values('R03', 'F06', 'Brownie', 100);
+insert into food_items values('R05', 'F06', 'Brownie', 120);
+insert into food_items values('R01', 'F07', 'French Fries', 90);
+insert into food_items values('R02', 'F07', 'French Fries', 80);
+insert into food_items values('R04', 'F07', 'French Fries', 60);
+insert into food_items values('R05', 'F07', 'French Fries', 70);
+insert into food_items values('R01', 'F08', 'Nuggets', 90);
+insert into food_items values('R02', 'F08', 'Nuggets', 100);
+insert into food_items values('R04', 'F08', 'Nuggets', 80);
+insert into food_items values('R05', 'F08', 'Nuggets', 120);
+insert into food_items values('R03', 'F09', 'Royal Faluda', 150);
+insert into food_items values('R03', 'F10', 'Cookie Sundae', 200);
+insert into food_items values('R03', 'F11', 'Kulfi', 50);
+insert into food_items values('R01', 'F12', 'Chicken Rice Bowl', 150);
+insert into food_items values('R02', 'F12', 'Chicken Rice Bowl', 140);
+insert into food_items values('R04', 'F13', 'Nachos', 70);
+insert into food_items values('R05', 'F13', 'Nachos', 80);
+insert into food_items values('R04', 'F14', 'Donut', 110);
+insert into food_items values('R06', 'F15', 'Mutton Biriyani', 300);
+insert into food_items values('R06', 'F16', 'Prawn Biriyani', 260);
+insert into food_items values('R06', 'F17', 'Seekh Kabab', 250);
+insert into food_items values('R01', 'F18', 'Mojito', 70);
+insert into food_items values('R02', 'F18', 'Mojito', 80);
+insert into food_items values('R03', 'F18', 'Mojito', 60);
+insert into food_items values('R04', 'F18', 'Mojito', 70);
+insert into food_items values('R05', 'F18', 'Mojito', 90);
+insert into food_items values('R06', 'F18', 'Mojito', 100);
+insert into food_items values('R03', 'F18', 'Mojito', 60);
+insert into food_items values('R06', 'F19', 'Shawarma', 80);
+insert into food_items values('R06', 'F20', 'Mandi Biriyani', 400);
+insert into food_items values('R04', 'F21', 'Panner Sizzler', 120);
+insert into food_items values('R06', 'F21', 'Panner Sizzler', 140);
+insert into food_items values('R04', 'F22', 'Sandwich', 60);
+insert into food_items values('R05', 'F22', 'Sandwich', 100);
+insert into food_items values('R03', 'F23', 'Waffle', 120);
+insert into food_items values('R04', 'F23', 'Waffle', 140);
+insert into food_items values('R05', 'F23', 'Waffle', 180);
